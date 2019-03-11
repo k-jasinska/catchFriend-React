@@ -1,7 +1,9 @@
 import React from 'react';
 
-const ButtonDelete = () => {
-    return (<button>DELETE</button>);
+const ButtonDelete = (props) => {
+    return (
+        <button className="delButton" onClick={props.delete}><i class="far fa-trash-alt"></i> delete</button>
+    );
 }
 
 export default ButtonDelete;

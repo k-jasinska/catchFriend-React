@@ -24,12 +24,23 @@ class App extends Component {
       })
   }
 
+
+  handleDelete = (id) => {
+    const people = [...this.state.users];
+    const index = people.findIndex(user => user.login.uuid === id)
+    people.splice(index, 1)
+    this.setState({
+      users: people,
+    })
+
+  }
+
   render() {
     const users = this.state.users;
     return (
       <>
         <ButtonFetchUsers click={this.handleDataFetch} />
-        {users.length > 0 ? <UserList users={users} /> : users}
+        {users.length > 0 ? <UserList users={users} delete={this.handleDelete} /> : users}
       </>
     );
   }

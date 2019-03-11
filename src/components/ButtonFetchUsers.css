@@ -1,13 +1,25 @@
 button {
     padding: 8px 15px;
-    border: 2px solid black;
-    background-color: white;
+    border: 1px solid black;
     cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #eb1919d7;
+    transition: background-color 0.2s;
 }
 
+.delButton:hover {
+    background-color: #e66007;
+}
 
 .addPerson {
     position: fixed;
     top: 20px;
     left: 20px;
+    background-color: #b8cc45de;
+}
+
+.addbtn {
+    background-color: rgb(94, 138, 163);
+
 }
