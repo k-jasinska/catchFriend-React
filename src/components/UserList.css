@@ -1,12 +1,19 @@
 .users {
-    margin: 0;
     padding: 0;
     width: 80%;
     text-align: center;
-    margin: 0 auto;
+    margin: 45px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+h4 {
+    margin: 6px 0;
+}
+
+p {
+    font-size: 12px;
 }
 
 .users div {
@@ -20,4 +27,11 @@
 
 img {
     border-radius: 50%;
+    filter: grayscale(100%);
+    transition: 0.4s;
+    box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.60);
+}
+
+.users div:hover>img {
+    filter: grayscale(20%);
 }

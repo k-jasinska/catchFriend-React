@@ -1,11 +1,12 @@
 button {
     padding: 8px 15px;
-    border: 1px solid black;
+    border: none;
     cursor: pointer;
     border-radius: 20px;
     color: white;
     background-color: #eb1919d7;
     transition: background-color 0.2s;
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.60);
 }
 
 .delButton:hover {
