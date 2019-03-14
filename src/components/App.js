@@ -5,6 +5,7 @@ import './App.css';
 import ButtonFetchUsers from './ButtonFetchUsers.js';
 import UserList from './UserList.js';
 import Search from './Search.js';
+import Messenger from './Messenger.js';
 
 const API = 'https://randomuser.me/api/?results=1';
 
@@ -13,6 +14,7 @@ class App extends Component {
   state = {
     users: [],
     find: '',
+    newChat: false,
   }
 
   handleDataFetch = () => {
@@ -42,14 +44,29 @@ class App extends Component {
     })
   }
 
+  handleButtonChat = (uuid) => {
+    this.setState({
+      newChat: uuid
+    })
+  }
+
+  handleButtonCloseChat = () => {
+    this.setState((prevState) => {
+      return {
+        newChat: ''
+      }
+    })
+  }
+
   render() {
-    const users = this.state.users;
+    const { users, find, newChat } = this.state;
     return (
       <>
         <div className="background-image"></div>
         <ButtonFetchUsers click={this.handleDataFetch} />
-        {users.length > 0 ? <UserList find={this.state.find} users={users} delete={this.handleDelete} /> : users}
-        <Search value={this.state.find} search={this.handleSearch} />
+        {users.length > 0 ? <UserList chat={this.handleButtonChat} find={find} users={users} delete={this.handleDelete} /> : users}
+        <Search value={find} search={this.handleSearch} />
+        {newChat ? <Messenger index={newChat} users={users} chat={this.handleButtonCloseChat} /> : null}
       </>
     );
   }

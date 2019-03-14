@@ -1,0 +1,87 @@
+.messenger {
+    position: fixed;
+    bottom: 0;
+    right: 60px;
+    width: 300px;
+    height: 330px;
+    box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.60);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.head {
+    height: 30px;
+    line-height: 30px;
+    background-color: #434d5a;
+    box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.60);
+    display: inline-block;
+    width: 100%;
+}
+
+.msg-btn {
+    height: 30px;
+    width: 30px;
+    color: #e84118;
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.minimalize {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.person {
+    margin: 0;
+    padding-left: 10px;
+    display: inline;
+}
+
+.body {
+    height: 230px;
+    background-color: rgb(231, 233, 243);
+    overflow-y: scroll;
+    color: black;
+    font-size: 12px;
+}
+
+.bottom {
+    height: 70px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.send {
+    color: rgb(163, 162, 162);
+    height: 40px;
+    width: 40px;
+    margin: 10px auto;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+i {
+    cursor: pointer;
+}
+
+.message {
+    margin: 5px;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 55px;
+}

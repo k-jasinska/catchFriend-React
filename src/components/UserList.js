@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserList.css';
 import ButtonDelete from './ButtonDelete.js';
-import ButtonAdd from './ButtonAdd.js';
+import ButtonChat from './ButtonChat.js';
 
 const UserList = (props) => {
 
@@ -17,8 +17,7 @@ const UserList = (props) => {
             <h4>{`${user.name.first} ${user.name.last}`}</h4>
             <p>{user.email}</p>
             <ButtonDelete key={user.login.md5} delete={props.delete.bind(this, user.login.md5)} />
-            <ButtonAdd key={user.login.uuid} />
-
+            <ButtonChat key={user.login.uuid} chat={props.chat.bind(this, user.login.uuid)} />
         </div>
     ))
 
