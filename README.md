@@ -3,3 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## See demo
 
 [https://k-jasinska.github.io/people-list](https://k-jasinska.github.io/people-list)
+
+## API
+
+[https://randomuser.me/](https://randomuser.me/)
