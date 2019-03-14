@@ -1,9 +1,9 @@
 import React from 'react';
 import './Search.css';
 
-const Search = () => {
+const Search = (props) => {
     return (<div className="search-box">
-        <input className="search-txt" placeholder="Szukaj osoby..." />
+        <input value={props.value} onChange={props.search} className="search-txt" placeholder="Szukaj osoby..." />
         <i className="fas fa-search search-btn"></i>
     </div>);
 }

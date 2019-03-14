@@ -12,6 +12,7 @@ const API = 'https://randomuser.me/api/?results=1';
 class App extends Component {
   state = {
     users: [],
+    find: '',
   }
 
   handleDataFetch = () => {
@@ -33,7 +34,12 @@ class App extends Component {
     this.setState({
       users: people,
     })
+  }
 
+  handleSearch = (e) => {
+    this.setState({
+      find: e.target.value,
+    })
   }
 
   render() {
@@ -42,8 +48,8 @@ class App extends Component {
       <>
         <div className="background-image"></div>
         <ButtonFetchUsers click={this.handleDataFetch} />
-        {users.length > 0 ? <UserList users={users} delete={this.handleDelete} /> : users}
-        <Search />
+        {users.length > 0 ? <UserList find={this.state.find} users={users} delete={this.handleDelete} /> : users}
+        <Search value={this.state.find} search={this.handleSearch} />
       </>
     );
   }

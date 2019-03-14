@@ -4,7 +4,14 @@ import ButtonDelete from './ButtonDelete.js';
 import ButtonAdd from './ButtonAdd.js';
 
 const UserList = (props) => {
-    const users = props.users.map(user => (
+
+    function searchingFor(term) {
+        return function (props) {
+            return props.name.first.toLowerCase().includes(term.toLowerCase()) || !term
+        }
+    }
+
+    const users = props.users.filter(searchingFor(props.find)).map(user => (
         <div className="person" key={user.login.uuid}>
             <img src={user.picture.large} alt={user.name.last} />
             <h4>{`${user.name.first} ${user.name.last}`}</h4>
