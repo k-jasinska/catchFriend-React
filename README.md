@@ -7,3 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## API
 
 [https://randomuser.me/](https://randomuser.me/)
+
+
+![screen](https://github.com/k-jasinska/people-list/blob/master/public/screen.JPG)
