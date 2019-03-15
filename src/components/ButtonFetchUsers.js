@@ -3,7 +3,7 @@ import './ButtonFetchUsers.css';
 
 const ButtonFetchUsers = (props) => {
     return (
-        <button className="addPerson" onClick={props.click}>Find new person</button>
+        <button className="addPerson" onClick={props.click}><i className="fas fa-plus"></i></button>
     );
 }
 

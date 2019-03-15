@@ -17,7 +17,10 @@ button {
     position: fixed;
     top: 20px;
     left: 20px;
+    width: 45px;
+    height: 45px;
     background-color: #b8cc45de;
+    border-radius: 50%;
 }
 
 .addbtn {

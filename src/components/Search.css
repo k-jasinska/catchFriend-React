@@ -5,7 +5,7 @@
     background-color: #2f3640;
     height: 40px;
     border-radius: 40px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .search-btn {
@@ -35,6 +35,11 @@
 }
 
 .search-box:hover>.search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-txt:focus {
     width: 240px;
     padding: 0 6px;
 }
