@@ -32,10 +32,20 @@ class App extends Component {
   handleDelete = (md5) => {
     const people = [...this.state.users];
     const index = people.findIndex(user => user.login.md5 === md5)
+    const indexMessenger = people.findIndex(user => user.login.uuid === this.state.newChat)
     people.splice(index, 1)
-    this.setState({
-      users: people,
-    })
+
+    if (indexMessenger === index) {
+      this.setState({
+        users: people,
+        newChat: '',
+      })
+    }
+    else {
+      this.setState({
+        users: people,
+      })
+    }
   }
 
   handleSearch = (e) => {
